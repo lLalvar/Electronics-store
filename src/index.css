@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (any-hover: none) {
+  * {
+    cursor: none !important;
+  }
+}
+
+:root {
+  --primary: #364365;
+}
