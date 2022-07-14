@@ -8,38 +8,40 @@ import "swiper/css/navigation";
 </script>
 
 <template>
-  <div class="mx-auto max-w-screen-2xl">
+  <section class="mx-auto max-w-screen-2xl">
     <swiper :modules="[Pagination, Navigation, Autoplay]" :pagination="{
-      bulletClass: 'swiper-pagination-bullet categories-section__swiper-pagination-bullet',
+      bulletClass: 'swiper-pagination-bullet hero_section__swiper-pagination-bullet',
     }" :navigation="{
   nextEl: '.swiper-button-next',
   prevEl: '.swiper-button-prev',
 }" :loop="true" :autoplay="{
   delay: 3000,
-  disableOnInteraction: false,
+  disableOnInteraction: true,
 }">
       <swiper-slide>
-        <img class="w-full select-none" src="../assets/Hero/hero1.png" alt="">
+        <img class="w-full select-none scale-y-105" src="../assets/Hero/hero1.png" alt="hero1">
       </swiper-slide>
       <swiper-slide>
-        <img class="w-full select-none" src="../assets/Hero/hero2.png" alt="">
+        <img class="w-full select-none scale-y-105" src="../assets/Hero/hero2.png" alt="hero2">
       </swiper-slide>
       <swiper-slide>
-        <img class="w-full select-none" src="../assets/Hero/hero3.png" alt="">
+        <img class="w-full select-none scale-y-105" src="../assets/Hero/hero3.png" alt="hero3">
       </swiper-slide>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
     </swiper>
-  </div>
+  </section>
 </template>
-
-<style scoped>
-.hero-section__swiper-pagination-bullet {
+ 
+<style>
+.hero_section__swiper-pagination-bullet {
   background: var(--primary);
 }
+</style>
 
+<style scoped>
 .swiper-button-next,
 .swiper-button-prev {
-  color: white;
+  color: var(--primary);
 }
 </style>

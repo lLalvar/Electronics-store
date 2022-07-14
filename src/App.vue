@@ -1,13 +1,12 @@
 <script setup>
 import Header from './components/Header.vue';
-import CategoriesSection from './components/CategoriesSection.vue';
-import HeroSection from './components/HeroSection.vue';
+import Home from './Pages/Home.vue';
+
 </script>
 
 <template>
   <Header />
-  <CategoriesSection />
-  <HeroSection />
+  <Home />
 </template>
 
 <style>
