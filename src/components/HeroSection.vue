@@ -5,6 +5,23 @@ import 'swiper/css'
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+const items = [
+  {
+    image: '/src/assets/Hero/hero1.png',
+    alt: 'hero 1,'
+  }
+  ,
+  {
+    image: '/src/assets/Hero/hero2.png',
+    alt: 'hero 2,'
+  }
+  ,
+  {
+    image: '/src/assets/Hero/hero3.png',
+    alt: 'hero 3,'
+  }
+]
+
 </script>
 
 <template>
@@ -16,16 +33,10 @@ import "swiper/css/navigation";
   prevEl: '.swiper-button-prev',
 }" :loop="true" :autoplay="{
   delay: 3000,
-  disableOnInteraction: true,
+  disableOnInteraction: false,
 }">
-      <swiper-slide>
-        <img class="w-full select-none scale-y-105" src="../assets/Hero/hero1.png" alt="hero1">
-      </swiper-slide>
-      <swiper-slide>
-        <img class="w-full select-none scale-y-105" src="../assets/Hero/hero2.png" alt="hero2">
-      </swiper-slide>
-      <swiper-slide>
-        <img class="w-full select-none scale-y-105" src="../assets/Hero/hero3.png" alt="hero3">
+      <swiper-slide v-for="item in items">
+        <img class="w-full select-none scale-y-105" :src="item.image" :alt="item.alt">
       </swiper-slide>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>

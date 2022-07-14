@@ -8,8 +8,8 @@ const toggleMenu = () => {
 </script>
 
 <template>
-  <header class=" bg-primary  text-white">
-    <div class="container mx-auto  h-[100px] p-4  flex items-center gap-2 md:gap-8">
+  <header class="bg-primary  text-white">
+    <div class="max-w-screen-2xl mx-auto  h-[100px] p-4  flex items-center gap-2 md:gap-8">
       <div class="w-20">
         <img src="../assets/logo.png" alt="logo">
       </div>

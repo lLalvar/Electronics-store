@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         primary: 'var(--primary)',
       },
+      screens: {
+        xs: '350px',
+      },
     },
   },
   plugins: [],
