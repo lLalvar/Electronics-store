@@ -1,6 +1,43 @@
 <script setup>
-import { ref } from 'vue';
+import { createPopper } from '@popperjs/core';
+import { ref, onMounted } from 'vue';
 import Search from './Search.vue'
+const categories = ref()
+const tooltipDiv = ref()
+const showEvents = ['mouseenter', 'focus'];
+const hideEvents = ['mouseleave', 'blur'];
+
+onMounted(() => {
+  createPopper(categories.value, tooltipDiv.value, {
+    placement: 'bottom-start',
+    modifiers: [
+      {
+        name: 'offset',
+        options: {
+          offset: [0, 30],
+        },
+      },
+    ],
+  });
+
+  function show() {
+    tooltip.setAttribute('data-show', '');
+    // popperInstance.update();
+  }
+
+  function hide() {
+    tooltip.removeAttribute('data-show');
+  }
+
+  showEvents.forEach((event) => {
+    categories.value.addEventListener(event, show);
+  });
+
+  hideEvents.forEach((event) => {
+    categories.value.addEventListener(event, hide);
+  });
+})
+
 const isOpen = ref(false);
 const toggleMenu = () => {
   isOpen.value = !isOpen.value;
@@ -17,11 +54,19 @@ const toggleMenu = () => {
         <ul class="flex items-center gap-4 justify-end">
           <li class="hidden  md:block flex-1">
             <div class="flex ">
-              <div class="flex gap-1 cursor-pointer hover:opacity-80 transition">
+              <div ref="categories" class="flex gap-1 cursor-pointer hover:opacity-80 transition">
                 <div class="text-xl">Categories</div>
                 <img class="translate-y-[3px]" src="../assets/arrow.svg" alt="arrow down">
               </div>
             </div>
+            <ul id="tooltip" ref="tooltipDiv" role="tooltip" class="bg-white text-primary z-20">
+              <li>Computers</li>
+              <li>Laptops</li>
+              <li>Phones</li>
+              <li>Tablets</li>
+              <li>TVs</li>
+              <li>Monitors</li>
+            </ul>
           </li>
           <li>
             <Search />
@@ -63,3 +108,13 @@ const toggleMenu = () => {
     </div>
   </header>
 </template> 
+
+<style>
+#tooltip {
+  display: none;
+}
+
+#tooltip[data-show] {
+  display: block;
+}
+</style>

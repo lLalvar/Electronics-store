@@ -29,7 +29,7 @@ const items = [
 </script>
 
 <template>
-  <section class="max-w-screen-2xl mx-auto px-4 py-8 text-primary">
+  <section class="max-w-screen-2xl mx-auto px-4 pt-10 pb-12 text-primary">
     <h2 class="text-4xl font-bold text-center mb-8">Best offers</h2>
     <swiper :modules="[Pagination]" :space-between="30" :pagination="{
       bulletClass: 'swiper-pagination-bullet best-offers_section__swiper-pagination-bullet',
@@ -44,7 +44,8 @@ const items = [
 }">
       <swiper-slide v-for="item in items">
         <div class="img-container cursor-pointer grid place-items-center overflow-hidden relative">
-          <div class="best-offer-image w-full transition duration-700"><img :src="item.image" :alt="item.alt"></div>
+          <div class="best-offer-image w-full transition duration-700"><img :src="item.image" :alt="item.alt"
+              class="w-full"></div>
           <AddToCartBtn class="add-to-card-btn" />
         </div>
       </swiper-slide>

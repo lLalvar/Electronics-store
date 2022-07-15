@@ -14,11 +14,11 @@ const items = [
 </script>
 
 <template>
-  <section class=" max-w-[1300px] mx-auto text-primary px-4 py-8">
+  <section class=" max-w-[1300px] mx-auto text-primary px-4 pt-10 pb-12">
     <h2 class="text-4xl font-bold text-center mb-8">Brands</h2>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5  justify-center gap-4">
       <div v-for="item in items" class="image">
-        <img :src="item.image" alt="image">
+        <img :src="item.image" alt="image" class="w-full">
       </div>
     </div>
   </section>

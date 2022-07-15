@@ -57,7 +57,7 @@ const items = [
 }">
       <swiper-slide v-for="item in items"
         class="cursor-pointer hover:shadow-md flex items-center flex-col gap-2 p-3 md:mb-0 transition w-auto">
-        <div class="w-20 lg::w-28 lg:w-auto ">
+        <div class="w-20 lg::w-28 lg:w-auto">
           <img :src="item.image" :alt="item.name">
         </div>
         <h3 class="text-xl">{{ item.name }}</h3>

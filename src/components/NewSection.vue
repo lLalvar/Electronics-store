@@ -44,7 +44,7 @@ const items = [
 
 <template>
   <section class="bg-primary text-white">
-    <div class="max-w-screen-2xl mx-auto px-4 py-8">
+    <div class="max-w-screen-2xl mx-auto px-4 pt-10 pb-12">
       <h2 class="text-4xl font-bold text-center mb-8">New</h2>
       <swiper :modules="[Pagination, Grid]" :slides-per-view="2" :grid="{
         fill: 'row',
@@ -68,7 +68,7 @@ const items = [
         <swiper-slide v-for="item in items">
           <div class="img-container cursor-pointer grid place-items-center overflow-hidden">
             <div class="new-section-img w-full overflow-hidden">
-              <img class="transition duration-500" :src="item.image" :alt="item.alt">
+              <img class="transition duration-500 w-full" :src="item.image" :alt="item.alt">
               <AddToCartBtn class="add-to-card-btn" bg="white" text="primary" :svgClr="primary" />
             </div>
           </div>
