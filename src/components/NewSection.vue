@@ -6,8 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/grid";
 import AddToCartBtn from './AddToCartBtn.vue';
 
-const primary = getComputedStyle(document.documentElement)
-  .getPropertyValue('--primary');
+const primary = getComputedStyle(document.documentElement).getPropertyValue('--primary');
 
 const items = [
   {
