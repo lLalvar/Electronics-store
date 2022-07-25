@@ -41,7 +41,6 @@ const items = [
 
 <template>
   <section class="categories-section">
-    <div class="w-full h-[100px] bg-primary"></div>
     <swiper class="max-w-screen-xl mx-auto justify-center px-4" :pagination="{
       bulletClass: 'swiper-pagination-bullet categories_section__swiper-pagination-bullet',
       horizontalClass: 'swiper-pagination-horizontal categories_section__swiper-pagination-horizontal',

@@ -8,9 +8,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "pinia": "^2.0.17",
     "swiper": "^8.3.0",
     "uuid": "^8.3.2",
-    "vue": "^3.2.25"
+    "vue": "^3.2.25",
+    "vue-router": "^4.1.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",

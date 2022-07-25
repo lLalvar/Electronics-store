@@ -5,6 +5,7 @@
 @media (any-hover: none) {
   * {
     cursor: none !important;
+    box-sizing: border-box;
   }
 }
 

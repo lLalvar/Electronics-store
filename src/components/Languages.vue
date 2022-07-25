@@ -30,13 +30,13 @@ const setLanguage = (lang) => {
 
 
 const showLanguages = () => {
-  if (width.value > 767) {
+  if (width.value >= 768) {
     isLanguagesOpen.value = true
   }
 }
 
 const hideLanguages = () => {
-  if (width.value > 767) {
+  if (width.value >= 768) {
     isLanguagesOpen.value = false
 
   }

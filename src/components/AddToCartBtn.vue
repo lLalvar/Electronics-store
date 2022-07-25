@@ -17,7 +17,7 @@ defineProps({
 
 <template>
   <div :class="'bg-' + bg + ' text-' + text"
-    class="absolute bottom-0 text-white flex w-full justify-center gap-2 cursor-pointer h-10 transition duration-300">
+    class="absolute bottom-0 left-0 text-white flex w-full justify-center gap-2 cursor-pointer h-10 transition duration-300">
     <button class="text-sm xs:text-base flex-1 opacity-80 transition duration-300 hover:opacity-100 font-bold">
       Add to Cart
     </button>
