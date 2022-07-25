@@ -41,8 +41,8 @@ screen.orientation.addEventListener('change', () => {
         class="w-9 h-1 bg-white  transition-transform duration-300">
       </div>
     </button>
-    <div v-if="toggle.isHamburgerMenuOpen" class="absolute top-[120px] left-0 flex flex-col items-center w-full">
-      <div class="fixed top-[101px] left-0 w-screen h-screen bg-primary -z-10 opacity-[.98]"></div>
+    <div v-if="toggle.isHamburgerMenuOpen" class="absolute top-[100px] left-0 flex flex-col items-center w-full">
+      <div class="fixed top-[71px] left-0 w-screen h-screen bg-primary -z-10 opacity-[.98]"></div>
       <ul class="absolute flex-col gap-2 w-full items-center">
         <li class="text-xl">
           <Cart />

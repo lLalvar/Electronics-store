@@ -11,5 +11,9 @@ export const useHamburgerMenu = defineStore('hamburgerMenu', () => {
       document.querySelector('body').style.overflow = 'visible'
     }
   }
-  return { isHamburgerMenuOpen, toggleMenu }
+  const hideMenu = () => {
+    isHamburgerMenuOpen.value = false
+    document.querySelector('body').style.overflow = 'visible'
+  }
+  return { isHamburgerMenuOpen, toggleMenu, hideMenu }
 })
