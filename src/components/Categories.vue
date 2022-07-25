@@ -53,7 +53,6 @@ const hideCategories = () => {
 const currentCategory = ref(null)
 
 const toggleNestedCategories = (item, itemIndex) => {
-  console.log(item.items);
   if (item.items) {
     if (itemIndex === currentCategory.value) {
       currentCategory.value = null
@@ -61,7 +60,9 @@ const toggleNestedCategories = (item, itemIndex) => {
       currentCategory.value = itemIndex
     }
   } else {
-    toggle.toggleMenu()
+    if (width.value < 768) {
+      toggle.toggleMenu()
+    }
   }
 }
 
