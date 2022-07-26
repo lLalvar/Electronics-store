@@ -4,15 +4,15 @@ import { ref } from 'vue'
 const languages = [
   {
     name: 'English',
-    logo: '/public/assets/flags/united-kingdom.png',
+    logo: './assets/flags/united-kingdom.png',
   },
   {
     name: 'Russian',
-    logo: '/public/assets/flags/russia.png',
+    logo: './assets/flags/russia.png',
   },
   {
     name: 'Armenian',
-    logo: '/public/assets/flags/armenia.png',
+    logo: './assets/flags/armenia.png',
   }
 ]
 

@@ -7,17 +7,17 @@ import "swiper/css/navigation";
 
 const items = [
   {
-    image: '/public/assets/Hero/hero1.png',
+    image: './assets/Hero/hero1.png',
     alt: 'hero 1,'
   }
   ,
   {
-    image: '/public/assets/Hero/hero2.png',
+    image: './assets/Hero/hero2.png',
     alt: 'hero 2,'
   }
   ,
   {
-    image: '/public/assets/Hero/hero3.png',
+    image: './assets/Hero/hero3.png',
     alt: 'hero 3,'
   }
 ]

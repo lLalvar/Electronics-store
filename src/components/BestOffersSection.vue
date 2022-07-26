@@ -7,22 +7,22 @@ import AddToCartBtn from './AddToCartBtn.vue';
 
 const items = [
   {
-    image: '/public/assets/bestOffers/bestOffer1.png',
+    image: './assets/bestOffers/bestOffer1.png',
     alt: 'best offer 1',
   }
   ,
   {
-    image: '/public/assets/bestOffers/bestOffer2.png',
+    image: './assets/bestOffers/bestOffer2.png',
     alt: 'best offer 2',
   }
   ,
   {
-    image: '/public/assets/bestOffers/bestOffer3.png',
+    image: './assets/bestOffers/bestOffer3.png',
     alt: 'best offer 3',
   }
   ,
   {
-    image: '/public/assets/bestOffers/bestOffer4.png',
+    image: './assets/bestOffers/bestOffer4.png',
     alt: 'best offer 4',
   }
 ]
