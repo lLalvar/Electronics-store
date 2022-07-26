@@ -76,7 +76,7 @@ const toggleNestedCategories = (item, itemIndex) => {
       <div @mouseenter="showCategories" @mouseleave="hideCategories"
         class="flex gap-1 items-center cursor-pointer hover:opacity-80 transition">
         <div class="text-lg">Categories</div>
-        <div><img src="../assets/arrow.svg" alt="arrow down" class="translate-y-[3px]"></div>
+        <div><img src="../../public/assets/arrow.svg" alt="arrow down" class="translate-y-[3px]"></div>
       </div>
     </div>
     <!-- Category Dropdown Menu -->

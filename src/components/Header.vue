@@ -18,7 +18,7 @@ const toggle = useHamburgerMenu();
     <div class="max-w-screen-2xl mx-auto h-[70px] md:h-[100px] p-4 flex items-center gap-2 sm:gap-5 lg:gap-8">
       <router-link to="/">
         <div @click="toggle.hideMenu" class="w-16 md:w-20 cursor-pointer">
-          <img src="../assets/logo.png" alt="logo">
+          <img src="../../public/assets/logo.png" alt="logo">
         </div>
       </router-link>
       <nav class="flex-1">

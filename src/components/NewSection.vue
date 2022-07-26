@@ -10,31 +10,31 @@ const primary = getComputedStyle(document.documentElement).getPropertyValue('--p
 
 const items = [
   {
-    image: '/src/assets/newItems/newItem1.png',
+    image: '/public/assets/newItems/newItem1.png',
     alt: 'new item 1',
   },
   {
-    image: '/src/assets/newItems/newItem2.png',
+    image: '/public/assets/newItems/newItem2.png',
     alt: 'new item 2',
   },
   {
-    image: '/src/assets/newItems/newItem3.png',
+    image: '/public/assets/newItems/newItem3.png',
     alt: 'new item 3',
   },
   {
-    image: '/src/assets/newItems/newItem4.png',
+    image: '/public/assets/newItems/newItem4.png',
     alt: 'new item 4',
   },
   {
-    image: '/src/assets/newItems/newItem5.png',
+    image: '/public/assets/newItems/newItem5.png',
     alt: 'new item 5',
   },
   {
-    image: '/src/assets/newItems/newItem6.png',
+    image: '/public/assets/newItems/newItem6.png',
     alt: 'new item 6',
   },
   {
-    image: '/src/assets/newItems/newItem7.png',
+    image: '/public/assets/newItems/newItem7.png',
     alt: 'new item 7',
   },
 ]

@@ -11,67 +11,67 @@ const items = [
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/src/assets/iphone.png'
+    image: '/public/assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/src/assets/iphone.png'
+    image: '/public/assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/src/assets/iphone.png'
+    image: '/public/assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/src/assets/iphone.png'
+    image: '/public/assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/src/assets/iphone.png'
+    image: '/public/assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/src/assets/iphone.png'
+    image: '/public/assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/src/assets/iphone.png'
+    image: '/public/assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/src/assets/iphone.png'
+    image: '/public/assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/src/assets/iphone.png'
+    image: '/public/assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/src/assets/iphone.png'
+    image: '/public/assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/src/assets/iphone.png'
+    image: '/public/assets/iphone.png'
   },
 
 
@@ -122,10 +122,10 @@ window.addEventListener('click', (e) => {
     <div>
       <h2 class="text-2xl font-bold mb-8" :class="{ 'mt-11': isFilterOpen }">Smartphones</h2>
       <div v-if="isFilterOpen && width < 768"
-        class="close-filter fixed top-0 right-0 bg-black w-screen h-screen z-10 opacity-0">
+        class="close-filter fixed top-0 right-0 bg-black w-screen h-screen z-10 opacity-10">
       </div>
       <div
-        :class="{ 'fixed top-[101px] left-0 z-20 px-8 pt-4 pb-[calc(101px+1rem)] h-full shadow-2xl overflow-auto': isFilterOpen && width < 768 }"
+        :class="{ 'fixed top-[71px] left-0 z-20 px-8 pt-4 pb-[calc(101px+1rem)] h-full shadow-2xl overflow-auto': isFilterOpen && width < 768 }"
         class="filter-container bg-white">
 
         <div class="flex w-[250px] mb-4">

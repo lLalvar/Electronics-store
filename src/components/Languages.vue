@@ -4,15 +4,15 @@ import { ref } from 'vue'
 const languages = [
   {
     name: 'English',
-    logo: '/src/assets/flags/united-kingdom.png',
+    logo: '/public/assets/flags/united-kingdom.png',
   },
   {
     name: 'Russian',
-    logo: '/src/assets/flags/russia.png',
+    logo: '/public/assets/flags/russia.png',
   },
   {
     name: 'Armenian',
-    logo: '/src/assets/flags/armenia.png',
+    logo: '/public/assets/flags/armenia.png',
   }
 ]
 
@@ -61,7 +61,7 @@ const toggleLanguages = () => {
         <div class="block text-lg">
           {{ language.name }}
         </div>
-        <img class="translate-y-[2px]" src="../assets/arrow.svg" alt="arrow down">
+        <img class="translate-y-[2px]" src="../../public/assets/arrow.svg" alt="arrow down">
       </div>
     </div>
     <div v-if="isLanguagesOpen" class="md:absolute md:bottom-0 md:right-0 md:translate-y-full md:w-32">

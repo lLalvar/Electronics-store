@@ -30,17 +30,17 @@
       <div
         class="absolute left-1/2 bottom-4 lg:bottom-8 flex flex-col gap-4 items-center justify-between -translate-x-1/2 ">
         <div class="mb-4 lg:mb-10 cursor-pointer">
-          <img src="../assets/logo.png" alt="">
+          <img src="../../public/assets/logo.png" alt="">
         </div>
         <div class="flex gap-3 xl:gap-8">
           <div class="hover:scale-110 transition duration-300 cursor-pointer">
-            <img src="../assets/socialMedia/facebook.svg" alt="">
+            <img src="../../public/assets/socialMedia/facebook.svg" alt="">
           </div>
           <div class="hover:scale-110 transition duration-300 cursor-pointer">
-            <img src="../assets/socialMedia/telegram.svg" alt="">
+            <img src="../../public/assets/socialMedia/telegram.svg" alt="">
           </div>
           <div class="scale-105 hover:scale-[1.15] transition duration-300 cursor-pointer">
-            <img src="../assets/socialMedia/messenger.svg" alt="">
+            <img src="../../public/assets/socialMedia/messenger.svg" alt="">
           </div>
         </div>
         <div>
@@ -55,7 +55,7 @@
             <h3 class="text-slate-300">(+374) 9999-9999-9999</h3>
           </div>
           <div>
-            <img src="../assets/socialMedia/phone.svg" alt="">
+            <img src="../../public/assets/socialMedia/phone.svg" alt="">
           </div>
           <div class="absolute -bottom-3 w-0 h-1 bg-slate-300 group-hover:w-full transition-all duration-300"></div>
         </div>
@@ -65,7 +65,7 @@
             <h3 class="text-slate-300">company.@example.com</h3>
           </div>
           <div>
-            <img src="../assets/socialMedia/message.svg" alt="">
+            <img src="../../public/assets/socialMedia/message.svg" alt="">
           </div>
           <div class="absolute -bottom-3 w-0 h-1 bg-slate-300 group-hover:w-full transition-all duration-300"></div>
         </div>

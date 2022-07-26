@@ -1,15 +1,15 @@
 <script setup>
 const items = [
-  { image: '/src/assets/brands/brand1.png', },
-  { image: '/src/assets/brands/brand2.png', },
-  { image: '/src/assets/brands/brand3.png', },
-  { image: '/src/assets/brands/brand4.png', },
-  { image: '/src/assets/brands/brand5.png', },
-  { image: '/src/assets/brands/brand6.png', },
-  { image: '/src/assets/brands/brand7.png', },
-  { image: '/src/assets/brands/brand8.png', },
-  { image: '/src/assets/brands/brand9.png', },
-  { image: '/src/assets/brands/brand10.png', },
+  { image: '/public/assets/brands/brand1.png', },
+  { image: '/public/assets/brands/brand2.png', },
+  { image: '/public/assets/brands/brand3.png', },
+  { image: '/public/assets/brands/brand4.png', },
+  { image: '/public/assets/brands/brand5.png', },
+  { image: '/public/assets/brands/brand6.png', },
+  { image: '/public/assets/brands/brand7.png', },
+  { image: '/public/assets/brands/brand8.png', },
+  { image: '/public/assets/brands/brand9.png', },
+  { image: '/public/assets/brands/brand10.png', },
 ]
 </script>
 
