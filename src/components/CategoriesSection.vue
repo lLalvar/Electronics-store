@@ -9,32 +9,32 @@ const items = [
   {
     id: uuidv4(),
     name: 'Computers',
-    image: '/public/assets/categoryItems/categoryItem1.png',
+    image: './public/assets/categoryItems/categoryItem1.png',
   },
   {
     id: uuidv4(),
     name: 'Laptops',
-    image: '/public/assets/categoryItems/categoryItem2.png',
+    image: './public/assets/categoryItems/categoryItem2.png',
   },
   {
     id: uuidv4(),
     name: 'Phones',
-    image: '/public/assets/categoryItems/categoryItem3.png',
+    image: './public/assets/categoryItems/categoryItem3.png',
   },
   {
     id: uuidv4(),
     name: 'Tablets',
-    image: '/public/assets/categoryItems/categoryItem4.png',
+    image: './public/assets/categoryItems/categoryItem4.png',
   },
   {
     id: uuidv4(),
     name: 'TVs',
-    image: '/public/assets/categoryItems/categoryItem5.png',
+    image: './public/assets/categoryItems/categoryItem5.png',
   },
   {
     id: uuidv4(),
     name: 'Monitors',
-    image: '/public/assets/categoryItems/categoryItem6.png',
+    image: './public/assets/categoryItems/categoryItem6.png',
   },
 ]
 </script>
