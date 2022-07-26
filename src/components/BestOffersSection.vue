@@ -4,6 +4,9 @@ import { Pagination, } from 'swiper'
 import 'swiper/css'
 import "swiper/css/pagination";
 import AddToCartBtn from './AddToCartBtn.vue';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const items = [
   {
@@ -30,7 +33,7 @@ const items = [
 
 <template>
   <section class="max-w-screen-2xl mx-auto px-4 pt-10 pb-12 text-primary">
-    <h2 class="text-4xl font-bold text-center mb-8">Best offers</h2>
+    <h2 class="text-2xl sm:text-4xl font-bold text-center mb-8">{{ t('bestOffers') }}</h2>
     <swiper :modules="[Pagination]" :space-between="30" :pagination="{
       bulletClass: 'swiper-pagination-bullet best-offers_section__swiper-pagination-bullet',
       horizontalClass: 'swiper-pagination-horizontal best-offers_section__swiper-pagination-horizontal',

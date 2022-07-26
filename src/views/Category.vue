@@ -11,67 +11,67 @@ const items = [
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/public/assets/iphone.png'
+    image: './assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/public/assets/iphone.png'
+    image: './assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/public/assets/iphone.png'
+    image: './assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/public/assets/iphone.png'
+    image: './assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/public/assets/iphone.png'
+    image: './assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/public/assets/iphone.png'
+    image: './assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/public/assets/iphone.png'
+    image: './assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/public/assets/iphone.png'
+    image: './assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/public/assets/iphone.png'
+    image: './assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/public/assets/iphone.png'
+    image: './assets/iphone.png'
   },
   {
     id: uuidv4(),
     name: 'Apple iPhone 13 Pro Max (256 GB, Alpine Green)',
     price: '$1,250.00',
-    image: '/public/assets/iphone.png'
+    image: './assets/iphone.png'
   },
 
 

@@ -1,42 +1,60 @@
 <script setup>
 import { v4 as uuidv4 } from 'uuid';
+import { computed } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination } from 'swiper'
 import 'swiper/css'
 import "swiper/css/pagination";
+import { useI18n } from 'vue-i18n'
 
-const items = [
-  {
-    id: uuidv4(),
-    name: 'Computers',
-    image: './assets/categoryItems/categoryItem1.png',
-  },
-  {
-    id: uuidv4(),
-    name: 'Laptops',
-    image: './assets/categoryItems/categoryItem2.png',
-  },
-  {
-    id: uuidv4(),
-    name: 'Phones',
-    image: './assets/categoryItems/categoryItem3.png',
-  },
-  {
-    id: uuidv4(),
-    name: 'Tablets',
-    image: './assets/categoryItems/categoryItem4.png',
-  },
-  {
-    id: uuidv4(),
-    name: 'TVs',
-    image: './assets/categoryItems/categoryItem5.png',
-  },
-  {
-    id: uuidv4(),
-    name: 'Monitors',
-    image: './assets/categoryItems/categoryItem6.png',
-  },
-]
+const { t, locale } = useI18n()
+
+
+const items = computed(() => {
+  return [
+    {
+      id: uuidv4(),
+      name: t('computers'),
+      image: './assets/categoryItems/categoryItem1.png',
+    },
+    {
+      id: uuidv4(),
+      name: t('laptops'),
+      image: './assets/categoryItems/categoryItem2.png',
+    },
+    {
+      id: uuidv4(),
+      name: t('phones'),
+      image: './assets/categoryItems/categoryItem3.png',
+    },
+    {
+      id: uuidv4(),
+      name: t('tablets'),
+      image: './assets/categoryItems/categoryItem4.png',
+    },
+    {
+      id: uuidv4(),
+      name: t('tvs'),
+      image: './assets/categoryItems/categoryItem5.png',
+    },
+    {
+      id: uuidv4(),
+      name: t('monitors'),
+      image: './assets/categoryItems/categoryItem6.png',
+    },
+  ]
+})
+
+const fontSize = computed(() => {
+  if (locale.value === 'en') {
+    return 'text-xl'
+  } else if (locale.value === 'ru') {
+    return 'text-lg'
+  } else {
+    return 'text-sm'
+  }
+})
+
 </script>
 
 <template>
@@ -60,7 +78,7 @@ const items = [
         <div class="w-20 lg::w-28 lg:w-auto">
           <img :src="item.image" :alt="item.name">
         </div>
-        <h3 class="text-xl">{{ item.name }}</h3>
+        <h3 :class="fontSize">{{ item.name }}</h3>
       </swiper-slide>
     </swiper>
   </section>

@@ -12,6 +12,7 @@
     "swiper": "^8.3.0",
     "uuid": "^8.3.2",
     "vue": "^3.2.25",
+    "vue-i18n": "^9.1.10",
     "vue-router": "^4.1.2"
   },
   "devDependencies": {

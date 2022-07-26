@@ -5,6 +5,9 @@ import 'swiper/css'
 import "swiper/css/pagination";
 import "swiper/css/grid";
 import AddToCartBtn from './AddToCartBtn.vue';
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const primary = getComputedStyle(document.documentElement).getPropertyValue('--primary');
 
@@ -44,7 +47,7 @@ const items = [
 <template>
   <section class="bg-primary text-white">
     <div class="max-w-screen-2xl mx-auto px-4 pt-10 pb-12">
-      <h2 class="text-4xl font-bold text-center mb-8">New</h2>
+      <h2 class="text-2xl sm:text-4xl font-bold text-center mb-8">{{ t('new') }}</h2>
       <swiper :modules="[Pagination, Grid]" :slides-per-view="2" :grid="{
         fill: 'row',
         rows: 2,
