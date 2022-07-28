@@ -3,9 +3,12 @@ import useWindowWidth from '../hooks/useWindowWidth'
 import { v4 as uuidv4 } from 'uuid'
 import { ref, computed } from 'vue'
 import { useHamburgerMenu } from '../store';
+import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
+
+const router = useRouter()
 
 const toggle = useHamburgerMenu();
 
@@ -65,11 +68,17 @@ const toggleNestedCategories = (item, itemIndex) => {
     }
   } else {
     if (width.value < 768) {
+      router.push('/category')
       toggle.toggleMenu()
     }
   }
 }
 
+const goTo = (item) => {
+  if (!item.items) {
+    router.push('/category')
+  }
+}
 
 </script>
 
@@ -81,7 +90,7 @@ const toggleNestedCategories = (item, itemIndex) => {
       <div @mouseenter="showCategories" @mouseleave="hideCategories"
         class="flex gap-1 items-center cursor-pointer hover:opacity-80 transition">
         <div class="text-lg">{{ t('categories') }}</div>
-        <div><img src="../../public/assets/arrow.svg" alt="arrow down" class="translate-y-[3px]"></div>
+        <div class="translate-y-[3px] w-3"><img src="../../public/assets/arrow.svg" alt="arrow down"></div>
       </div>
     </div>
     <!-- Category Dropdown Menu -->
@@ -89,8 +98,8 @@ const toggleNestedCategories = (item, itemIndex) => {
       <div class="h-[36px]"></div>
       <ul class=" bg-white text-primary shadow-lg w-48" v-if="isCategoriesOpen">
 
-        <li v-for="(item, index) in categoriesItems" @mouseenter="toggleNestedCategories(item, index)"
-          @mouseleave="toggleNestedCategories(item, index)"
+        <li v-for="(item, index) in categoriesItems" @click="goTo(item)"
+          @mouseenter="toggleNestedCategories(item, index)" @mouseleave="toggleNestedCategories(item, index)"
           class="relative font-medium px-2 border border-b-slate-300 cursor-pointer">
           <div class=" flex gap-1 items-center justify-between hover:translate-x-1 transition duration-300">
             <div class="py-2">{{ item.name }}</div>
@@ -105,16 +114,15 @@ const toggleNestedCategories = (item, itemIndex) => {
 
           <ul v-if="currentCategory === index"
             class="absolute right-0 mt-0 m-0 -top-[1px] translate-x-full bg-white text-primary shadow-lg w-48">
-            <router-link to="/category">
-              <li v-for="dropdownItem in item.items" v-if="currentCategory === index"
-                class="relative font-medium px-2 py-2 border border-b-slate-300 cursor-pointer flex items-center  gap-2">
+            <li v-for="dropdownItem in item.items" v-if="currentCategory === index"
+              class="relative font-medium px-2 py-2 border border-b-slate-300 cursor-pointer flex items-center gap-2">
+              <router-link to="/category">
                 <div class=" flex items-center justify-between hover:translate-x-1 transition duration-300">
                   <div>{{ dropdownItem }}</div>
                 </div>
-              </li>
-            </router-link>
+              </router-link>
+            </li>
           </ul>
-
         </li>
       </ul>
     </div>
@@ -128,7 +136,6 @@ const toggleNestedCategories = (item, itemIndex) => {
 
     <div @mouseenter="showCategories" @mouseleave="hideCategories" class="">
       <ul class="bg-white text-primary shadow-lg max-h-[55vh] overflow-y-auto">
-
         <li data-toggle="toggle" v-for="(item, index) in categoriesItems" @click="toggleNestedCategories(item, index)"
           class="flex flex-col items-center font-medium px-2 border border-b-slate-300 cursor-pointer">
           <div class=" flex gap-1 items-center justify-center transition duration-300 pointer-events-none">
@@ -143,14 +150,14 @@ const toggleNestedCategories = (item, itemIndex) => {
           </div>
 
           <ul v-if="currentCategory === index" class="mt-0 m-4 shadow-md bg-white text-primary w-full max-w-[300px]">
-            <router-link to="/category">
-              <li @click="toggle.toggleMenu" v-for="dropdownItem in item.items"
-                class="font-medium px-2 py-2 border border-b-slate-300 cursor-pointer flex items-center justify-center gap-2">
+            <li @click="toggle.toggleMenu" v-for="dropdownItem in item.items"
+              class="font-medium px-2 py-2 border border-b-slate-300 cursor-pointer flex items-center justify-center gap-2">
+              <router-link to="/category">
                 <div class="flex items-center justify-between transition duration-300">
                   <div>{{ dropdownItem }}</div>
                 </div>
-              </li>
-            </router-link>
+              </router-link>
+            </li>
           </ul>
         </li>
       </ul>
