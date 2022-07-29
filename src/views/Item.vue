@@ -248,19 +248,19 @@ const currentImage = ref(1)
 const images = [
   {
     id: 1,
-    path: '../../public/assets/item/img1.png',
+    path: './assets/item/img1.png',
   },
   {
     id: 2,
-    path: '../../public/assets/item/img2.png',
+    path: './assets/item/img2.png',
   },
   {
     id: 3,
-    path: '../../public/assets/item/img3.png',
+    path: './assets/item/img3.png',
   },
   {
     id: 4,
-    path: '../../public/assets/item/img4.png',
+    path: './assets/item/img4.png',
   },
 ]
 
