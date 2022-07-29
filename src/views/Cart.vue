@@ -30,13 +30,13 @@ const decrement = () => {
             <div class="flex items-start justify-between bg-slate-50 h-6 lg:h-8">
               <button @click="decrement"
                 class="group flex justify-center items-center h-full w-6 lg:w-8 hover:bg-primary transition">
-                <div class="h-[3px] w-3 bg-black group-hover:bg-white transition"></div>
+                <div class="h-[3px] w-3 bg-primary group-hover:bg-white transition"></div>
               </button>
               <div class="h-full w-6 lg:w-8 flex items-center justify-center">{{ itemCount }}</div>
               <button @click="increment"
                 class="group relative flex justify-center items-center h-full w-6 lg:w-8 hover:bg-primary transition">
-                <div class="h-[3px] w-3 bg-black group-hover:bg-white transition"></div>
-                <div class="absolute rotate-90 h-[3px] w-3 bg-black group-hover:bg-white transition"></div>
+                <div class="h-[3px] w-3 bg-primary group-hover:bg-white transition"></div>
+                <div class="absolute rotate-90 h-[3px] w-3 bg-primary group-hover:bg-white transition"></div>
               </button>
             </div>
             <div class="flex items-center justify-center">

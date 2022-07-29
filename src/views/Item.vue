@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue'
 import AddToCartBtn from '../components/AddToCartBtn.vue';
 
 const items = [
@@ -242,28 +243,51 @@ const items = [
 
 ]
 
-const click = (e) => {
-  console.log(e);
+const currentImage = ref(1)
+
+const images = [
+  {
+    id: 1,
+    path: '../../public/assets/item/img1.png',
+  },
+  {
+    id: 2,
+    path: '../../public/assets/item/img2.png',
+  },
+  {
+    id: 3,
+    path: '../../public/assets/item/img3.png',
+  },
+  {
+    id: 4,
+    path: '../../public/assets/item/img4.png',
+  },
+]
+
+const changeImage = (id) => {
+  currentImage.value = id
 }
+
 </script>
 
 <template>
   <section class="flex flex-col lg:flex-row justify-center items-center p-4 py-12 gap-4 max-w-screen-xl mx-auto">
-    <div class="flex">
-      <div class="flex flex-col gap-2">
-        <div class="w-12 sm:w-16 cursor-pointer border border-primary"><img src="../../public/assets/item/img2.png"
-            alt="iphone"></div>
-        <div class="w-12 sm:w-16 cursor-pointer border border-primary"><img src="../../public/assets/item/img3.png"
-            alt="iphone cameras"></div>
-        <div class="w-12 sm:w-16 cursor-pointer border border-primary"><img src="../../public/assets/item/img4.png"
-            alt="specification"></div>
-      </div>
-      <div class="">
-        <img src="../../public/assets/item/img1.png" alt="iphone">
-      </div>
 
+    <div class="flex justify-center gap-4">
+      <div class="flex flex-col gap-2">
+        <div v-for="image in images">
+          <div @click="changeImage(image.id)" class="w-12 sm:w-16 cursor-pointer border border-slate-300"
+            :class="{ 'border-primary': currentImage === image.id }"><img :src="image.path" alt="iphone">
+          </div>
+        </div>
+      </div>
+      <div>
+        <img :src="'../../public/assets/item/img' + currentImage + '.png'" alt="iphone"
+          style="width: 500px; aspect-ratio: 4/5; object-fit: cover; ">
+      </div>
     </div>
-    <div class="max-w-[60ch] flex flex-col gap-4">
+
+    <div class="max-w-[60ch] flex flex-col gap-4 m-auto">
       <h2 class="text-xl font-bold">
         Apple iPhone 13 Pro Max
         (256 GB, Alpine Green)
