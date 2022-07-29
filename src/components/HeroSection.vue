@@ -32,7 +32,7 @@ const items = [
   nextEl: '.swiper-button-next',
   prevEl: '.swiper-button-prev',
 }" :loop="true" :autoplay="{
-  delay: 3000,
+  delay: 5000,
   disableOnInteraction: false,
 }">
       <swiper-slide v-for="item in items">
