@@ -5,10 +5,12 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div class="flex items-center justify-center gap-1 cursor-pointer hover:opacity-80 transition">
-    <img src="../../public/assets/cart.svg" alt="cart" class="w-6">
-    <div class="text-lg">
-      {{ t('cart') }}
+  <router-link to="/cart">
+    <div class="flex items-center justify-center gap-1 cursor-pointer hover:opacity-80 transition">
+      <img src="../../public/assets/cart.svg" alt="cart" class="w-6">
+      <div class="text-lg">
+        {{ t('cart') }}
+      </div>
     </div>
-  </div>
+  </router-link>
 </template>

@@ -18,13 +18,6 @@ window.addEventListener('resize', () => {
   }
 })
 
-screen.orientation.addEventListener('change', () => {
-  if (width.value > 766) {
-    toggle.isHamburgerMenuOpen.value = false
-    document.querySelector('body').style.overflow = 'visible';
-  }
-})
-
 </script>
 
 <template>

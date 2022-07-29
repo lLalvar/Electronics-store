@@ -5,9 +5,11 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination } from 'swiper'
 import 'swiper/css'
 import "swiper/css/pagination";
+import { useRouter } from 'vue-router';
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
+const router = useRouter()
 
 
 const items = computed(() => {
@@ -55,6 +57,10 @@ const fontSize = computed(() => {
   }
 })
 
+const goTo = () => {
+  router.push('/category')
+}
+
 </script>
 
 <template>
@@ -73,8 +79,10 @@ const fontSize = computed(() => {
     slidesPerView: 6,
   },
 }">
-      <swiper-slide v-for="item in items"
+
+      <swiper-slide @click="goTo" v-for="item in items"
         class="cursor-pointer hover:shadow-md flex items-center flex-col gap-2 p-3 md:mb-0 transition w-auto">
+
         <div class="w-20 lg::w-28 lg:w-auto">
           <img :src="item.image" :alt="item.name">
         </div>

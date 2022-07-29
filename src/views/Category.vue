@@ -101,13 +101,6 @@ watch(width, () => {
   }
 })
 
-screen.orientation.addEventListener('change', () => {
-  if (width.value >= 768) {
-    isFilterOpen.value = true;
-  } else {
-    isFilterOpen.value = false;
-  }
-})
 
 window.addEventListener('click', (e) => {
   if (e.target.classList.contains('close-filter')) {
@@ -198,12 +191,14 @@ window.addEventListener('click', (e) => {
     <div class="article-container">
       <article v-for="item in items"
         class="add-to-cart-btn-container relative overflow-hidden border border-slate-300 p-4 pb-12 cursor-pointer hover:shadow-lg transition">
-        <div class="grid place-items-center"><img :src="item.image" alt="iphone"></div>
-        <div>
-          <h5 class="text-center text-base font-semibold mb-2">{{ item.name }}</h5>
-          <h5 class="text-center text-base font-semibold">{{ item.price }}</h5>
-        </div>
-        <AddToCartBtn class="add-to-card-btn" />
+        <router-link to="/item">
+          <div class="grid place-items-center"><img :src="item.image" alt="iphone"></div>
+          <div>
+            <h5 class="text-center text-base font-semibold mb-2">{{ item.name }}</h5>
+            <h5 class="text-center text-base font-semibold">{{ item.price }}</h5>
+          </div>
+          <AddToCartBtn class="add-to-card-btn" />
+        </router-link>
       </article>
     </div>
 

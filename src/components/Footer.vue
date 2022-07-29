@@ -10,7 +10,7 @@ const year = new Date().getFullYear()
   <footer class="bg-primary  text-white overflow-hidden">
     <div class="relative flex flex-col lg:flex-row justify-between max-w-screen-2xl mx-auto p-4 pt-10 pb-2">
 
-      <div class="flex flex-col sm:flex-row gap-8 sm:gap-10 lg:gap-4 xl:gap-8 justify-center mb-10">
+      <div class="flex flex-col sm:flex-row gap-8 sm:gap-16 lg:gap-4 xl:gap-8 justify-center mb-10">
         <ul class="flex flex-col items-center sm:items-start sm:gap-1">
           <li class="text-xl sm:text-2xl mb-2">{{ t('about') }}</li>
           <li class="text-slate-300 cursor-pointer hover:text-white transition">{{ t('aboutUs') }}</li>
@@ -64,7 +64,9 @@ const year = new Date().getFullYear()
         <div
           class="flex flex-col gap-4 items-center lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2">
           <div class="cursor-pointer">
-            <img src="../../public/assets/logo.png" alt="logo">
+            <router-link to="/category">
+              <img src="../../public/assets/logo.png" alt="logo">
+            </router-link>
           </div>
           <div class="flex gap-3 xl:gap-8">
             <div class="hover:scale-110 transition duration-300 cursor-pointer">
