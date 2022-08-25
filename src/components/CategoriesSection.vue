@@ -80,7 +80,7 @@ const goTo = () => {
   },
 }">
 
-      <swiper-slide @click="goTo" v-for="item in items"
+      <swiper-slide @click="goTo" v-for="item in items" :key="item.id"
         class="cursor-pointer hover:shadow-md flex items-center flex-col gap-2 p-3 md:mb-0 transition w-auto">
 
         <div class="w-20 lg::w-28 lg:w-auto">

@@ -98,7 +98,7 @@ const goTo = (item) => {
       <div class="h-[36px]"></div>
       <ul class=" bg-white text-primary shadow-lg w-48" v-if="isCategoriesOpen">
 
-        <li v-for="(item, index) in categoriesItems" @click="goTo(item)"
+        <li v-for="(item, index) in categoriesItems" :key="item.id" @click="goTo(item)"
           @mouseenter="toggleNestedCategories(item, index)" @mouseleave="toggleNestedCategories(item, index)"
           class="relative font-medium px-2 border border-b-slate-300 cursor-pointer">
           <div class=" flex gap-1 items-center justify-between hover:translate-x-1 transition duration-300">
@@ -136,7 +136,8 @@ const goTo = (item) => {
 
     <div @mouseenter="showCategories" @mouseleave="hideCategories" class="">
       <ul class="bg-white text-primary shadow-lg max-h-[55vh] overflow-y-auto">
-        <li data-toggle="toggle" v-for="(item, index) in categoriesItems" @click="toggleNestedCategories(item, index)"
+        <li data-toggle="toggle" v-for="(item, index) in categoriesItems" :key="item.id"
+          @click="toggleNestedCategories(item, index)"
           class="flex flex-col items-center font-medium px-2 border border-b-slate-300 cursor-pointer">
           <div class=" flex gap-1 items-center justify-center transition duration-300 pointer-events-none">
             <div class="py-2">{{ item.name }}</div>

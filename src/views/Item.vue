@@ -322,7 +322,7 @@ const changeImage = (id) => {
           </div>
           <div class="w-full">
             <div v-for="(text, index) in item.text" :class="{ 'border-b-2': item.text.length - 1 !== index }"
-              class="flex w-full border-slate-200 items-center">
+              class="flex w-full border-slate-200">
               <div class="min-w-[6.5rem] min-md:w-[130px]">
                 <h4 class="text-sm md:text-base font-semibold">
                   {{ text.title }}
